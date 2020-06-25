@@ -2,7 +2,6 @@ library(tidyverse)
 library(seqinr)
 library(here)
 
-file_fasta <- here("input.fasta")
 file_out <- here("src", "output.out")
 
 system(paste(path_netmhcpan, file_fasta, "-a", HLAs, " >", file_out, sep = " " ))

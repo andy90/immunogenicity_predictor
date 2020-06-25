@@ -42,13 +42,23 @@ get_count <- function(v){
 self_peps <- read.table(file = here("data", "self_peps.txt"), stringsAsFactors = FALSE)
 get_self_similarity <- function(seqs){
   self_similarity_topN <- apply(check_similarity(seqs, self_peps$V1), 2, get_count)
-  Rself <- colSums(self_similarity_topN[26:51, ] ) # 25 is the threshold for self
+  
+  if (ncol(self_similarity_topN) > 1){
+    Rself <- colSums(self_similarity_topN[26:51, ] ) # 25 is the threshold for self
+  }else{
+    Rself <- sum(self_similarity_topN[26:51 ] ) # 25 is the threshold for self
+  }
+  
 }
 
 foreign_peps <- read.table(file = here("data", "foreign_peps_noHIV.txt"), stringsAsFactors = FALSE)
 get_foreign_similarity <- function(seqs){
   foreign_similarity_topN <- apply(check_similarity(seqs, foreign_peps$V1), 2, get_count)
-  Rforeign <- colSums(foreign_similarity_topN[18:51, ] ) # 17 is the threshold for foreign
+  if (ncol(foreign_similarity_topN) > 1){
+    Rforeign <- colSums(foreign_similarity_topN[18:51, ] ) # 17 is the threshold for foreign
+  }else{
+    Rforeign <- sum(foreign_similarity_topN[18:51] ) # 17 is the threshold for foreign
+  }
 }
 
 ##########

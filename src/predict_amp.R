@@ -11,7 +11,7 @@ data_final <-
   set_names(c("HLA", "peptide", "amplitude", "immunogenic")) %>%
   arrange(desc(amplitude) )
 
-write.csv(data_final, file = here("predicted_immunogenicity.csv"), quote = FALSE, row.names = FALSE)
+write.csv(data_final, file = final_output_file, quote = FALSE, row.names = FALSE)
 
 system(paste("rm",  file_out, sep = " " ))
 
