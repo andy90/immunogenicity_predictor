@@ -5,6 +5,8 @@ The application of this tool to the peptides listed in Prachar et al [1] is show
 
 The application of this tool to the peptides listed in Ahmed et al [2] is shown in examples/dataAhmed.
 
+The application of this tool to all the 8-11mers of SARS-CoV-2 is shown in examples/dataSARS2_allpeps.
+
 If you used this tool, please cite [3].
 
 Should you have any question, please contact anggao@mit.edu
