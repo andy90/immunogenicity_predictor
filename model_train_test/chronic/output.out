@@ -1,0 +1,58 @@
+# /Users/anggao/Documents/netMHCpan-4.0/Darwin_x86_64/bin/netMHCpan /Users/anggao/Documents/immunogenicity_predictor/model_train_test/chronic/LRSLFLFSY.fasta -a HLA-A23:01 -l 8,9,10,11,12
+# Mon Aug  3 17:47:23 2020
+# User: anggao
+# PWD : /Users/anggao/Documents/immunogenicity_predictor
+# Host: Darwin angs-mbp.lan 18.6.0 x86_64
+# -a       HLA-A23:01           HLA allele
+# -l       8,9,10,11,12         Peptide length [8-11] (multiple length with ,)
+# Command line parameters set to:
+#	[-rdir filename]     /Users/anggao/Documents/netMHCpan-4.0/Darwin_x86_64 Home directory for NetMHpan
+#	[-syn filename]      /Users/anggao/Documents/netMHCpan-4.0/Darwin_x86_64/data/synlist.bin Synaps file
+#	[-v]                 0                    Verbose mode
+#	[-dirty]             0                    Dirty mode, leave tmp dir+files
+#	[-tdir filename]     /var/folders/8b/r8gb9jxn0l93mrt4x6p1b5tr0000gn/T//netMHCpanXXXXXX Temporary directory (made with mkdtemp)
+#	[-hlapseudo filename] /Users/anggao/Documents/netMHCpan-4.0/Darwin_x86_64/data/MHC_pseudo.dat File with HLA pseudo sequences
+#	[-hlaseq filename]                        File with full length HLA sequences
+#	[-a line]            HLA-A23:01           HLA allele
+#	[-f filename]                             File name with input
+#	[-w]                 0                    w option for webface
+#	[-s]                 0                    Sort output on descending affinity
+#	[-p]                 0                    Use peptide input
+#	[-rth float]         0.500000             Rank Threshold for high binding peptides
+#	[-rlt float]         2.000000             Rank Threshold for low binding peptides
+#	[-l string]          8,9,10,11,12         Peptide length [8-11] (multiple length with ,)
+#	[-xls]               0                    Save output to xls file
+#	[-xlsfile filename]  NetMHCpan_out.xls    Filename for xls dump
+#	[-t float]           -99.900002           Threshold for output
+#	[-thrfmt filename]   /Users/anggao/Documents/netMHCpan-4.0/Darwin_x86_64/data/threshold/%s.thr.%s Format for threshold filenames
+#	[-expfix]            0                    Exclude prefix from synlist
+#	[-version filename]  /Users/anggao/Documents/netMHCpan-4.0/Darwin_x86_64/data/version File with version information
+#	[-inptype int]       0                    Input type [0] FASTA [1] Peptide
+#	[-listMHC]           0                    Print list of alleles included in netMHCpan
+#	[-allname filename]  /Users/anggao/Documents/netMHCpan-4.0/Darwin_x86_64/data/allelenames File with print names for alleles
+#	[-BA]                0                    Make Binding affinity prediction
+
+# NetMHCpan version 4.0
+
+# Tmpdir made /var/folders/8b/r8gb9jxn0l93mrt4x6p1b5tr0000gn/T//netMHCpan11PMRl
+# Input is in FSA format
+
+# Peptide length 8,9,10,11,12
+
+# Make Eluted ligand likelihood predictions
+
+HLA-A23:01 : Distance to training data  0.000 (using nearest neighbor HLA-A23:01)
+
+# Rank Threshold for Strong binding peptides   0.500
+# Rank Threshold for Weak binding peptides   2.000
+-----------------------------------------------------------------------------------
+  Pos          HLA         Peptide       Core Of Gp Gl Ip Il        Icore        Identity     Score   %Rank  BindLevel
+-----------------------------------------------------------------------------------
+    1  HLA-A*23:01       LRSLFLFSY  LRSLFLFSY  0  0  0  0  0    LRSLFLFSY               1 0.0075530  9.1080
+    1  HLA-A*23:01        LRSLFLFS  LRSLFLFS-  0  0  0  8  1     LRSLFLFS               1 0.0000120 75.0000
+    2  HLA-A*23:01        RSLFLFSY  RSL-FLFSY  0  0  0  3  1     RSLFLFSY               1 0.0011460 19.2532
+-----------------------------------------------------------------------------------
+
+Protein 1. Allele HLA-A*23:01. Number of high binders 0. Number of weak binders 0. Number of peptides 3
+
+-----------------------------------------------------------------------------------

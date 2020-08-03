@@ -1,0 +1,61 @@
+# /Users/anggao/Documents/netMHCpan-4.0/Darwin_x86_64/bin/netMHCpan /Users/anggao/Documents/immunogenicity_predictor/model_train_test/acute/VPVWKEATTT.fasta -a HLA-B55:01 -l 8,9,10,11,12
+# Mon Aug  3 16:08:44 2020
+# User: anggao
+# PWD : /Users/anggao/Documents/immunogenicity_predictor
+# Host: Darwin angs-mbp.lan 18.6.0 x86_64
+# -a       HLA-B55:01           HLA allele
+# -l       8,9,10,11,12         Peptide length [8-11] (multiple length with ,)
+# Command line parameters set to:
+#	[-rdir filename]     /Users/anggao/Documents/netMHCpan-4.0/Darwin_x86_64 Home directory for NetMHpan
+#	[-syn filename]      /Users/anggao/Documents/netMHCpan-4.0/Darwin_x86_64/data/synlist.bin Synaps file
+#	[-v]                 0                    Verbose mode
+#	[-dirty]             0                    Dirty mode, leave tmp dir+files
+#	[-tdir filename]     /var/folders/8b/r8gb9jxn0l93mrt4x6p1b5tr0000gn/T//netMHCpanXXXXXX Temporary directory (made with mkdtemp)
+#	[-hlapseudo filename] /Users/anggao/Documents/netMHCpan-4.0/Darwin_x86_64/data/MHC_pseudo.dat File with HLA pseudo sequences
+#	[-hlaseq filename]                        File with full length HLA sequences
+#	[-a line]            HLA-B55:01           HLA allele
+#	[-f filename]                             File name with input
+#	[-w]                 0                    w option for webface
+#	[-s]                 0                    Sort output on descending affinity
+#	[-p]                 0                    Use peptide input
+#	[-rth float]         0.500000             Rank Threshold for high binding peptides
+#	[-rlt float]         2.000000             Rank Threshold for low binding peptides
+#	[-l string]          8,9,10,11,12         Peptide length [8-11] (multiple length with ,)
+#	[-xls]               0                    Save output to xls file
+#	[-xlsfile filename]  NetMHCpan_out.xls    Filename for xls dump
+#	[-t float]           -99.900002           Threshold for output
+#	[-thrfmt filename]   /Users/anggao/Documents/netMHCpan-4.0/Darwin_x86_64/data/threshold/%s.thr.%s Format for threshold filenames
+#	[-expfix]            0                    Exclude prefix from synlist
+#	[-version filename]  /Users/anggao/Documents/netMHCpan-4.0/Darwin_x86_64/data/version File with version information
+#	[-inptype int]       0                    Input type [0] FASTA [1] Peptide
+#	[-listMHC]           0                    Print list of alleles included in netMHCpan
+#	[-allname filename]  /Users/anggao/Documents/netMHCpan-4.0/Darwin_x86_64/data/allelenames File with print names for alleles
+#	[-BA]                0                    Make Binding affinity prediction
+
+# NetMHCpan version 4.0
+
+# Tmpdir made /var/folders/8b/r8gb9jxn0l93mrt4x6p1b5tr0000gn/T//netMHCpanlfwUXv
+# Input is in FSA format
+
+# Peptide length 8,9,10,11,12
+
+# Make Eluted ligand likelihood predictions
+
+HLA-B55:01 : Distance to training data  0.070 (using nearest neighbor HLA-B54:01)
+
+# Rank Threshold for Strong binding peptides   0.500
+# Rank Threshold for Weak binding peptides   2.000
+-----------------------------------------------------------------------------------
+  Pos          HLA         Peptide       Core Of Gp Gl Ip Il        Icore        Identity     Score   %Rank  BindLevel
+-----------------------------------------------------------------------------------
+    1  HLA-B*55:01      VPVWKEATTT  VPWKEATTT  0  2  1  0  0   VPVWKEATTT               1 0.0671640  2.3526
+    1  HLA-B*55:01       VPVWKEATT  VPVWKEATT  0  0  0  0  0    VPVWKEATT               1 0.2312150  0.5354 <= WB
+    2  HLA-B*55:01       PVWKEATTT  PVWKEATTT  0  0  0  0  0    PVWKEATTT               1 0.0005350 37.6667
+    1  HLA-B*55:01        VPVWKEAT  VPVWKEAT-  0  0  0  8  1     VPVWKEAT               1 0.0167410  6.8866
+    2  HLA-B*55:01        PVWKEATT  -PVWKEATT  0  0  0  0  1     PVWKEATT               1 0.0005270 37.8718
+    3  HLA-B*55:01        VWKEATTT  -VWKEATTT  0  0  0  0  1     VWKEATTT               1 0.0001350 57.3864
+-----------------------------------------------------------------------------------
+
+Protein 1. Allele HLA-B*55:01. Number of high binders 0. Number of weak binders 1. Number of peptides 6
+
+-----------------------------------------------------------------------------------
