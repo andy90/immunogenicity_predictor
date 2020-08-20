@@ -115,7 +115,12 @@ test_acc <- function(training_indicies, test_indicies, model){
   roc_new <- cbind(tpr_new, fpr)
   
   corr_a_test <- cor(x = all_response_percent[test_indicies], y = test_mag, method = "spearman")
-  list(corr_a_test, auc, roc_new)
+  if (model != "b"){
+    res_final <- list(corr_a_test, auc, roc_new, a_best, b_best)
+  }else{
+    res_final <- list(corr_a_test, auc, roc_new)
+  }
+  res_final
 }
 
 dom_crit <- 0.25 # the criteria for labeling positive and negative data
@@ -134,6 +139,8 @@ nfold <- 10 # split the data into nfold to perform 10 fold cross validation
 corrs <- numeric()
 aucs <- numeric()
 tprs_full <- numeric()
+as <- numeric()
+bs <- numeric()
 fpr <- seq(0, 1, 0.01) 
 nrepeat <- 20
 for (irepeat in 1:nrepeat){
@@ -169,9 +176,14 @@ for (irepeat in 1:nrepeat){
     
     tpr_full <- df_acc_full[[3]][,1]
     
+    a_best_full <- df_acc_full[[4]]
+    b_best_full <- df_acc_full[[5]]
+    
     corrs <- rbind(corrs, c(corr_test_full, corr_test_sf, corr_test_sb, corr_test_fb, corr_test_s, corr_test_f, corr_test_b))
     aucs <- rbind(aucs, c(auc_full, auc_sf, auc_sb, auc_fb, auc_s, auc_f, auc_b))
     tprs_full <- cbind(tprs_full, tpr_full)
+    as <- c(as, a_best_full)
+    bs <- c(bs, b_best_full)
   }
 }
 
@@ -192,3 +204,6 @@ write.table(x = aucs_mean, row.names = FALSE, quote = FALSE, file = here("model_
 write.table(x = tprs_full, row.names = FALSE, col.names = FALSE, quote = FALSE, file = here("model_train_test/chronic", paste("res_allmodels/tprs_full", dom_crit, ".txt", sep = "")))
 
 write.table(data.frame(fpr), row.names = FALSE, col.names = FALSE, file = here("model_train_test/chronic", paste("res_allmodels/fpr_full", dom_crit, ".txt", sep = "")))
+
+write.table(x = cbind(as, bs), row.names = FALSE, col.names = FALSE, quote = FALSE, file = here("model_train_test/chronic", paste("res_allmodels/ab_full", dom_crit, ".txt", sep = "")))
+

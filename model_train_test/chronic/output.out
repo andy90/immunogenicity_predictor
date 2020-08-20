@@ -1,5 +1,5 @@
 # /Users/anggao/Documents/netMHCpan-4.0/Darwin_x86_64/bin/netMHCpan /Users/anggao/Documents/immunogenicity_predictor/model_train_test/chronic/LRSLFLFSY.fasta -a HLA-A23:01 -l 8,9,10,11,12
-# Mon Aug  3 17:47:23 2020
+# Thu Aug 20 11:49:58 2020
 # User: anggao
 # PWD : /Users/anggao/Documents/immunogenicity_predictor
 # Host: Darwin angs-mbp.lan 18.6.0 x86_64
@@ -34,7 +34,7 @@
 
 # NetMHCpan version 4.0
 
-# Tmpdir made /var/folders/8b/r8gb9jxn0l93mrt4x6p1b5tr0000gn/T//netMHCpan11PMRl
+# Tmpdir made /var/folders/8b/r8gb9jxn0l93mrt4x6p1b5tr0000gn/T//netMHCpanzdnXL8
 # Input is in FSA format
 
 # Peptide length 8,9,10,11,12
