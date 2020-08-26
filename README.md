@@ -7,6 +7,10 @@ The application of this tool to the peptides listed in Ahmed et al [2] is shown 
 
 The application of this tool to all the 8-11mers of SARS-CoV-2 is shown in examples/dataSARS2_allpeps.
 
+examples/common_corona analyzed the shared predicted immunogenic peptides between SARS-Cov-2 and common corona virus.
+
+model_train_test/ shows how the model is trained and tested based on HIV acute patients data and HIV chronic patients data respectively.
+
 If you used this tool, please cite [3].
 
 Should you have any question, please contact anggao@mit.edu
